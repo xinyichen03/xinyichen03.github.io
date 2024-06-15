@@ -16,7 +16,7 @@ import logoCMP from '@/images/logos/cmp.png'
 import logoCaffenero from '@/images/logos/caffenero.png'
 import bigsur from '@/images/photos/bigsur.JPG'
 import hiking from '@/images/photos/hiking.JPG'
-import surfing from '@/images/photos/surfing.JPG'
+import surfing from '@/images/photos/surfing.jpg'
 import berkeley from '@/images/photos/berkeley.JPG'
 import graduation from '@/images/photos/graduation.jpeg'
 
