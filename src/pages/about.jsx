@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
+import { CldImage } from "next-cloudinary"
 
 import { Container } from '@/components/Container'
 import {
@@ -10,7 +11,6 @@ import {
   LinkedInIcon,
   TwitterIcon,
 } from '@/components/SocialIcons'
-import portraitxinyi from '@/images/photos/portraitxinyi.JPG'
 function SocialLink({ className, href, children, icon: Icon }) {
   return (
     <li className={clsx(className, 'flex')}>
@@ -50,18 +50,28 @@ export default function About() {
         <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
           <div className="lg:pl-20">
             <div className="max-w-xs px-2.5 lg:max-w-none">
-              <Image
-                src={portraitxinyi}
+              <CldImage
+                src={"portraitxinyi_oelay0"}
                 alt=""
+                width="2000"
+                height="2000"
                 className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
               />
+                 {/*1:1;*/}
+                 {/*object-cover: image cover the entire container */}
             </div>
           </div>
-          <div className="lg:order-first lg:row-span-2">
+          <div className="lg:order-first lg:row-span-2"> {/*
+            large: width >= 1024px; move this element (the box for title) to the first;
+            when large, 2 rows: title and paragraphs. */}
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
               I’m Xinyi Chen. I live in London, where I pursue new challenges.
             </h1>
-            <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
+            <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400"> {/*
+              margin at the top of 6;
+              vertical space between children (paragraphs) of the value of 7 in tailwind css (28px) ;
+              font size to base size, ie 1 rem = 16px ;
+              when in dark mode, text color change to zinc-400 */}
               <p>
                 My career began in the intersection of arts, culture, and media,
                 but my journey has led me to appreciate the transformative power of technology and data.

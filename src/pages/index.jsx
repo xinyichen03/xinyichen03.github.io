@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
+import { CldImage } from 'next-cloudinary';
 
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
@@ -12,13 +13,7 @@ import {
   LinkedInIcon,
   TwitterIcon,
 } from '@/components/SocialIcons'
-import logoCMP from '@/images/logos/cmp.png'
-import logoCaffenero from '@/images/logos/caffenero.png'
-import bigsur from '@/images/photos/bigsur.JPG'
-import hiking from '@/images/photos/hiking.JPG'
-import surfing from '@/images/photos/surfing.jpg'
-import berkeley from '@/images/photos/berkeley.JPG'
-import graduation from '@/images/photos/graduation.jpeg'
+
 
 import { formatDate } from '@/lib/formatDate'
 import { generateRssFeed } from '@/lib/generateRssFeed'
@@ -142,7 +137,7 @@ function Resume() {
     {
       company: 'CityMusic Promotions',
       title: 'Marketing Associate',
-      logo: logoCMP,
+      logo: "cmp_ut3g41",
       start: '2022',
       end: {
         label: 'Present',
@@ -152,7 +147,7 @@ function Resume() {
     {
       company: 'Caffè Nero',
       title: 'Shift Leader',
-      logo: logoCaffenero,
+      logo: "caffenero_bc0gfg",
       start: '2021',
       end: '2022',
     },
@@ -168,7 +163,7 @@ function Resume() {
         {resume.map((role, roleIndex) => (
           <li key={roleIndex} className="flex gap-4">
             <div className="relative mt-0 flex h-12 w-12 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-              <Image src={role.logo} alt="" className="h-10 w-10" unoptimized />
+              <CldImage src={role.logo} alt="" width="40" height="40" className="h-10 w-10" unoptimized />
             </div>
             <dl className="flex flex-auto flex-wrap gap-x-35">
               <dt className="sr-only">Company</dt>
@@ -212,7 +207,7 @@ function Photos() {
   return (
     <div className="mt-16 sm:mt-20">
       <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        {[surfing, berkeley, bigsur, graduation, hiking].map((image, imageIndex) => (
+        {["surfing_ny61ja", "berkeley_peszls", "bigsur_iobd2o", "graduation_kecag4", "hiking_kyd256"].map((image, imageIndex) => (
           <div
             key={imageIndex}
             className={clsx(
@@ -220,8 +215,10 @@ function Photos() {
               rotations[imageIndex % rotations.length]
             )}
           >
-            <Image
+            <CldImage
               src={image}
+              width="1000"
+              height="1000"
               alt=""
               sizes="(min-width: 640px) 18rem, 11rem"
               className="absolute inset-0 h-full w-full object-cover"
