@@ -85,6 +85,7 @@ export default function Projects() {
                   height="40"
                   alt=""
                   className="h-10 w-10 rounded-full"
+                  unoptimized
                 />
               </div>
               <span className="mt-2.5 text-base text-center font-semibold text-zinc-800 dark:text-zinc-100">

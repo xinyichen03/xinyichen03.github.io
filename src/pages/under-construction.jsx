@@ -16,6 +16,7 @@ export default function UnderConstruction() {
 								height="600"
 								alt=""
 								className="aspect-square rounded-2xl object-cover dark:bg-transparent"
+								unoptimized
 							/>
 						</div>
 					</div>

@@ -162,7 +162,7 @@ function Resume() {
         {resume.map((role, roleIndex) => (
           <li key={roleIndex} className="flex gap-4">
             <div className="relative mt-0 flex h-12 w-12 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-              <CldImage src={role.logo} alt="" width="40" height="40" className="h-10 w-10" />
+              <CldImage src={role.logo} alt="" width="40" height="40" className="h-10 w-10" unoptimized/>
             </div>
             <dl className="flex flex-auto flex-wrap gap-x-35">
               <dt className="sr-only">Company</dt>
@@ -221,6 +221,7 @@ function Photos() {
               alt=""
               sizes="(min-width: 640px) 18rem, 11rem"
               className="absolute inset-0 h-full w-full object-cover"
+              unoptimized
             />
           </div>
         ))}

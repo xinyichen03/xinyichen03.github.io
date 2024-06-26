@@ -14,6 +14,7 @@ export default function NotFound() {
                 height="600"
                 alt=""
                 className="aspect-square rounded-2xl object-cover bg-transparent"
+                unoptimized
               />
             </div>
           </div>

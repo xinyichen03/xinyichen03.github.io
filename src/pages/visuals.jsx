@@ -20,6 +20,7 @@ function ImageGrid({images}) {
 						alt=""
 						sizes="(min-width: 640px) 18rem, 11rem"
 						className="h-full w-full object-cover"
+						unoptimized
 					/>
 				</li>))}
 		</ul>)
