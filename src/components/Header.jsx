@@ -234,8 +234,8 @@ function Avatar({ large = false, className, ...props }) {
     >
       <CldImage
         src={"profileImage_jcjhwf"}
-        width="40"
-        height="40"
+        width="64"
+        height="64"
         alt=""
         className={clsx(
           'rounded-full bg-zinc-100 object-cover dark:bg-zinc-800',
