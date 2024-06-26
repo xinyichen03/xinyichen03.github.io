@@ -1,12 +1,12 @@
 import { Fragment, useEffect, useRef } from 'react'
-import Image from 'next/image'
+import { CldImage } from "next-cloudinary";
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import profileImage from '@/images/photos/profileImage.jpg'
+
 function CloseIcon(props) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
@@ -232,8 +232,10 @@ function Avatar({ large = false, className, ...props }) {
       className={clsx(className, 'pointer-events-auto')}
       {...props}
     >
-      <Image
-        src={profileImage}
+      <CldImage
+        src={"profileImage_jcjhwf"}
+        width="40"
+        height="40"
         alt=""
         className={clsx(
           'rounded-full bg-zinc-100 object-cover dark:bg-zinc-800',
