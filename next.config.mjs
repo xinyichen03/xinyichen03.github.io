@@ -11,7 +11,7 @@ const nextConfig = {
     scrollRestoration: true,
   },
   images: {
-    unoptimized: true,
+    unoptimized: false,
   },
 }
 
