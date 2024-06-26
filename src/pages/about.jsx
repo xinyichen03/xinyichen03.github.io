@@ -55,7 +55,6 @@ export default function About() {
                 alt=""
                 width="2000"
                 height="2000"
-                unoptimized
                 className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
               />
                  {/*1:1;*/}
