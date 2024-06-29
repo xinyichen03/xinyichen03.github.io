@@ -11,7 +11,8 @@ const nextConfig = {
     scrollRestoration: true,
   },
   images: {
-    unoptimized: true,
+    loader: 'custom',
+    loaderFile: './src/lib/cloudinaryLoader.js'
   },
 }
 
