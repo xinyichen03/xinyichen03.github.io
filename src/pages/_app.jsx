@@ -1,10 +1,10 @@
 import { useEffect, useRef } from 'react'
-
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
-
 import '@/styles/tailwind.css'
 import 'focus-visible'
+import { GoogleAnalytics } from '@next/third-parties/google'
+
 
 function usePrevious(value) {
   let ref = useRef()
@@ -30,6 +30,7 @@ export default function App({ Component, pageProps, router }) {
         <Header />
         <main>
           <Component previousPathname={previousPathname} {...pageProps} />
+          <GoogleAnalytics gaId="G-RDTLC6C9ZJ" />
         </main>
         <Footer />
       </div>

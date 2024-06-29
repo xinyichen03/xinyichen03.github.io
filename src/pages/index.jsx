@@ -17,6 +17,9 @@ import {
 import { formatDate } from '@/lib/formatDate'
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
+import { GoogleAnalytics } from '@next/third-parties/google'
+
+
 
 function MailIcon(props) {
   return (
@@ -232,6 +235,7 @@ function Photos() {
 export default function Home({ articles }) {
   return (
     <>
+      <GoogleAnalytics gaId="G-RDTLC6C9ZJ" />
       <Head>
         <title>
           Xinyi Chen - Arts enthusiast transitioning into tech
